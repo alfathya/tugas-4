@@ -12,9 +12,15 @@ body {
 
 nav {
     padding: 1rem;
-    background-color: red;
+    background-color: #001E6C;
+    filter: saturate(20);
     display: flex;
     justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
 }
 
 .login, .sign-up {
@@ -54,20 +60,61 @@ button:hover {
 
 .barang h1 {
     text-align: center;
+    margin: 3rem 0 1rem 0;
 }
 
 .pemilihan-barang {
     display: flex;
-    justify-content: space-around;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .kotak {
     border: 1px solid white;
 }
 
+.kotak h3, p {
+    text-align: center;
+}
+
+.kotak img {
+    display: block;
+    margin: 1rem auto;
+    width: 10rem;
+    border-radius: 100%;
+}
+
+.kotak button {
+    width: 200px;
+}
+
 table {
+    text-align: center;
     width: 100%;
 }
+
+.modal {
+    display: block; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal__content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40rem; 
+    height: 10rem
+  }
 
 .hidden {
     display: none;

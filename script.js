@@ -26,26 +26,19 @@ function signup(e) {
     clear('username-signup');
     clear('password-signup');
     clear('email');
-} 
-
-let sepatuF = document.getElementById("sepatuF");
-let sepatuB = document.getElementById("sepatuB");
-let raket = document.getElementById("raket");
-
-function milihsepatuF(){
-    alert("Anda memilih sepatu futsal, ada diskon spesial hari ini!")
 }
 
-sepatuF.addEventListener("click", milihsepatuF)
-
-
-function milihsepatuB(){
-    alert("Stock terbatas, awas kehabisan!")
-}
-sepatuB.addEventListener("click", milihsepatuB)
-
-function milihRaket(){
-    alert("Diskon 10% untuk Raket Badminton, segera beli!")
+function closeModal() {
+    document.getElementsByClassName('modal')[0].classList.add('hidden');
 }
 
-raket.addEventListener("click", milihRaket)
+function showModal (message) {
+    document.getElementsByClassName('modal__message')[0].innerHTML = message;
+    document.getElementsByClassName('modal')[0].classList.remove('hidden');
+}
+
+function show(showclass, hiddenclass1, hiddenclass2) {
+    document.getElementsByClassName(showclass)[0].classList.remove('hidden');
+    document.getElementsByClassName(hiddenclass1)[0].classList.add('hidden');
+    document.getElementsByClassName(hiddenclass2)[0].classList.add('hidden');
+}
